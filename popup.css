@@ -1,0 +1,30 @@
+:root { color-scheme: dark; --bg: #10131a; --panel: #171c26; --text: #f4f7fb; --muted: #8993a5; --accent: #6c8cff; --border: #2b3444; }
+* { box-sizing: border-box; }
+body { width: 360px; margin: 0; background: var(--bg); color: var(--text); font: 14px/1.4 Inter, system-ui, -apple-system, sans-serif; }
+.app { padding: 20px; }
+.header, .progress-row, .setting-label, .range-labels { display: flex; align-items: center; justify-content: space-between; }
+.eyebrow { color: var(--accent); font-size: 10px; font-weight: 800; letter-spacing: .14em; margin: 0 0 2px; }
+h1 { font-size: 20px; margin: 0; }
+.icon-button, button { border: 0; color: inherit; cursor: pointer; }
+.icon-button { background: transparent; font-size: 21px; padding: 3px 5px; color: var(--muted); }
+.reader { align-items: center; background: var(--panel); border: 1px solid var(--border); border-radius: 12px; display: flex; height: 150px; justify-content: center; margin: 20px 0 12px; overflow: hidden; padding: 16px; text-align: center; }
+.word { font-size: 32px; font-weight: 700; letter-spacing: -.03em; max-width: 100%; overflow-wrap: anywhere; }
+.progress-row { color: var(--muted); font-size: 12px; margin-bottom: 6px; }
+progress { accent-color: var(--accent); height: 6px; width: 100%; }
+.controls { display: grid; grid-template-columns: 48px 1fr 48px; gap: 10px; margin: 16px 0 20px; }
+.controls button { border-radius: 8px; font-size: 15px; font-weight: 700; height: 40px; }
+.play, .load { background: var(--accent); color: white; }
+.secondary { background: var(--panel); border: 1px solid var(--border) !important; font-size: 25px !important; }
+.speed-control { border-top: 1px solid var(--border); padding-top: 15px; }
+.setting-label { font-weight: 650; }
+output { color: var(--accent); }
+input[type="range"] { accent-color: var(--accent); margin: 10px 0 0; width: 100%; }
+.range-labels, .hint { color: var(--muted); font-size: 11px; }
+.text-input { border-top: 1px solid var(--border); margin-top: 15px; padding-top: 15px; }
+.text-input label { display: block; font-weight: 650; margin-bottom: 7px; }
+textarea { background: var(--panel); border: 1px solid var(--border); border-radius: 7px; color: var(--text); display: block; font: inherit; padding: 9px; resize: vertical; width: 100%; }
+.load { border-radius: 6px; margin-top: 8px; padding: 8px 12px; }
+.hint { margin: 16px 0 0; text-align: center; }
+kbd { background: var(--panel); border: 1px solid var(--border); border-radius: 3px; padding: 1px 4px; }
+body.light { color-scheme: light; --bg: #f5f7fb; --panel: #fff; --text: #162033; --muted: #687386; --border: #dce2ec; }
+button:focus-visible, input:focus-visible, textarea:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }

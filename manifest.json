@@ -1,0 +1,30 @@
+{
+  "manifest_version": 3,
+  "name": "SpeedReader",
+  "version": "1.0.0",
+  "description": "Read selected webpage text one word at a time.",
+  "action": {
+    "default_title": "Open SpeedReader",
+    "default_popup": "popup.html"
+  },
+  "permissions": ["activeTab", "storage"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "commands": {
+    "capture-selection": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+Y",
+        "mac": "MacCtrl+Shift+Y"
+      },
+      "description": "Capture the selected text for SpeedReader"
+    }
+  }
+}
